@@ -26,10 +26,10 @@ const somethingWillHappen2 = () => {
     if (true) {
       setTimeout(() => {
         resolve('Hey!')
-      }, 2000);
+      }, 2000)
     } else {
-      const error = new Error('Whooops!');
-      return reject(error);
+      const error = new Error('Whooops!')
+      return reject(error)
     }
   })
 }

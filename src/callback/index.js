@@ -18,4 +18,4 @@ function printDate(dateNow) {
   console.log('printDate', dateNow)
 }
 
-date(printDate);
+date(printDate)

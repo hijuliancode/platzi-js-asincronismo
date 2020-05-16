@@ -1,4 +1,4 @@
-let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
 
 const fetchData = (url_api) => {
   return new Promise((resolve, reject) => {
@@ -17,17 +17,17 @@ const fetchData = (url_api) => {
 module.exports = fetchData
 
 // function fetchData(url_api, callback) {
-//   let xhttp = new XMLHttpRequest();
-//   xhttp.open('GET', url_api, true);
+//   let xhttp = new XMLHttpRequest()
+//   xhttp.open('GET', url_api, true)
 //   xhttp.onreadystatechange = function(event) {
 //     if (xhttp.readyState === 4) {
 //       if (xhttp.status === 200) {
-//         callback(null, JSON.parse(xhttp.responseText));
+//         callback(null, JSON.parse(xhttp.responseText))
 //       } else {
-//         const error = new Error('Error => ' + url_api);
-//         return callback(error, null);
+//         const error = new Error('Error => ' + url_api)
+//         return callback(error, null)
 //       }
 //     }
 //   }
-//   xhttp.send();
+//   xhttp.send()
 // }

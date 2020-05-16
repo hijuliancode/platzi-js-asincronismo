@@ -3,7 +3,7 @@ const doSomethingAsync = () => {
     (true)
       ? setTimeout(() => resolve('Do Something Async'), 4000)
       : reject(new Error('Test error'))
-  });
+  })
 }
 
 const doSomething = async () => {
