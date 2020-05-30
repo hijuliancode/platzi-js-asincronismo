@@ -3,13 +3,15 @@ const API = 'https://rickandmortyapi.com/api/character/'
 
 const anotherFunction = async (url_api) => {
   try {
-    const data = await fetchData(url_api);
-    const character = await fetchData(`${url_api}${data.results[0].id}`)
-    const origin = await fetchData(character.origin.url)
-
-    console.log('data.info.count', data.info.count)
-    console.log('character.name', character.name)
-    console.log('origin.dimension', origin.dimension)
+    const { results, info: { count } } = await fetchData(url_api);
+    const { origin: { url }, name } = await fetchData(`${url_api}${results[0].id}`)
+    const { dimension } = await fetchData(url)
+   
+    console.log(`
+            Cantidad de personajes: ${count}
+            Personaje: ${name}
+            Dimension: ${dimension}
+        `)
   } catch {
     console.error(new Error('catch error =>', error))
   }
